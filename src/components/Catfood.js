@@ -60,7 +60,7 @@ export class Catfood extends Component {
         }
         else {
             content.push("Чего сидишь, порадуй котэ, ");
-            content.push(<a href={"#"} onClick={() => this.selectItem()}>купи</a>);
+            content.push(<a href={""} onClick={() => this.selectItem()}>купи</a>);
         }
         return content;
     }
