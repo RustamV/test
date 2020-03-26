@@ -1,0 +1,44 @@
+.products {
+    min-height: 100vh;
+    background-image: url(../img/Shadow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.products__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.products__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.products__column {
+    padding: 0 0 40px 0;
+
+    @media (min-width: 576px) {
+        padding: 0 20px 40px 20px;
+    }
+}
+
+.products__header {
+    text-align: center;
+    padding: 30px 30px 0 30px;
+    margin-bottom: 40px;
+}
+
+.products__header h2 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 300;
+}

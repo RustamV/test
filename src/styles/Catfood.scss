@@ -1,0 +1,198 @@
+$default: #1698d9;
+$defaultGray: #666666;
+$defaultHover: #2ea8e6;
+$selected: #d91667;
+$selectedHover: #e62e7a;
+$disabled: #b3b3b3;
+$disabledYellow: #ffff66;
+
+.catfood {
+    width: 320px;
+    height: 480px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    
+    &:hover {
+        .catfood__svg-border g g use {
+            stroke: $defaultHover;
+        }
+
+        .catfood__weight {
+            background-color: $defaultHover;
+        }
+    }
+
+    &.disabled {
+        color: $disabled;
+
+        .catfood__content {
+                &:before {
+                    opacity: 0.4;
+                }
+        }
+
+        .catfood__svg-border g g use {
+            stroke: $disabled;
+        }
+
+        .catfood__weight {
+            background-color: $disabled;
+        }
+
+        .catfood__title, .catfood__descr, .catfood__addition, .catfood__count, .catfood__gift, .catfood__additional-text {
+            opacity: 0.6;
+        }
+
+        .catfood__footer {
+            color: $disabledYellow;
+        }
+    }
+
+    &.selected {
+        .catfood__svg-border g g use {
+            stroke: $selected;
+        }
+
+        .catfood__weight {
+            background-color: $selected;
+        }
+
+        &:hover {
+            .catfood__svg-border g g use {
+                stroke: $selectedHover;
+            }
+    
+            .catfood__weight {
+                background-color: $selectedHover;
+            }
+        }
+    }
+}
+
+.catfood__svg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.catfood__svg-border {
+    z-index: 2;
+}
+
+.catfood__svg-border g g use {
+    stroke: $default;
+}
+
+.catfood__svg-fill {
+    z-index: -1;
+}
+
+.catfood__wrap {
+    width: 100%;
+    height: 100%;
+    border-radius: 11px;
+	position: relative;
+	z-index: 1;
+    overflow: hidden;
+}
+
+.catfood__content {
+    padding-left: 44px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+            width: 100%;
+            height: 100%;
+			z-index: 0;
+			background-image: url(../img/Photo.png);
+			background-repeat: no-repeat;
+			background-position: -21px 216px;
+		}
+}
+
+.catfood__title {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 48px;
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+
+.catfood__descr {
+    padding-top: 20px;
+    font-size: 16px;
+    color: $defaultGray;
+    margin-bottom: 0;
+}
+
+.catfood__addition {
+    padding-top: 15px;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.catfood__count {
+    padding-top: 15px;
+    font-size: 14px;
+    color: $defaultGray;
+    margin-bottom: 0;
+}
+
+.catfood__gift {
+    padding-top: 5px;
+    font-size: 14px;
+    color: $defaultGray;
+    margin-bottom: 0;
+}
+
+.catfood__additional-text {
+    padding-top: 5px;
+    font-size: 14px;
+    color: $defaultGray;
+    margin-bottom: 0;
+}
+
+.catfood__weight {
+    width: 80px;
+    height: 80px;
+    background-color: $default;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.catfood__weight strong {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.catfood__footer {
+    color: #ffffff;
+    text-align: center;
+    font-size: 13px;
+    padding-top: 10px;
+}
+
+.catfood__footer a {
+    color: #1698d9;
+    text-decoration: none;
+    border-bottom: 1px dashed #1698d9;
+}
