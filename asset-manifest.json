@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.84d84768.chunk.css",
+    "main.js": "/static/js/main.a4f10e1d.chunk.js",
+    "main.js.map": "/static/js/main.a4f10e1d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1d018977.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1d018977.js.map",
+    "static/js/2.bf0d5988.chunk.js": "/static/js/2.bf0d5988.chunk.js",
+    "static/js/2.bf0d5988.chunk.js.map": "/static/js/2.bf0d5988.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.0f64280a3f21f750683c769624dec57c.js": "/precache-manifest.0f64280a3f21f750683c769624dec57c.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.84d84768.chunk.css.map": "/static/css/main.84d84768.chunk.css.map",
+    "static/js/2.bf0d5988.chunk.js.LICENSE.txt": "/static/js/2.bf0d5988.chunk.js.LICENSE.txt",
+    "static/media/Global.scss": "/static/media/Exo20-Thin.d8e858b2.woff2",
+    "static/media/Catfood.scss": "/static/media/Photo.87c2ef89.png",
+    "static/media/Products.scss": "/static/media/Shadow.211b74c0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1d018977.js",
+    "static/js/2.bf0d5988.chunk.js",
+    "static/css/main.84d84768.chunk.css",
+    "static/js/main.a4f10e1d.chunk.js"
+  ]
+}
