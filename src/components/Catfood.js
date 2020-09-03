@@ -7,40 +7,31 @@ export class Catfood extends Component {
     constructor(props) {
         super(props);
         this.state = {
-           addition: this.props.addition,
-           portion: this.props.portion,
-           portionText: this.props.portionText,
-           weight: this.props.weight,
-           phrase: this.props.phrase,
-           disabled: this.props.disabled,
-           mouseCount: this.props.mouseCount,
-           mouseText: this.props.mouseText,
-           selected: false,
-           additionalText: this.props.additionalText
+           selected: false
         };
     }
 
     portionString() {
         let content = [];
-        content.push(<strong>{this.state.portion}</strong>);
-        content.push(` ${this.state.portionText}`);
+        content.push(<strong>{this.props.portion}</strong>);
+        content.push(` ${this.props.portionText}`);
         return content;
     }
 
     mouseString() {
         let content = [];
-        if(this.state.mouseCount > 1 ) {
-            content.push(<strong>{this.state.mouseCount}</strong>);
-            content.push(` ${this.state.mouseText}`);
+        if(this.props.mouseCount > 1 ) {
+            content.push(<strong>{this.props.mouseCount}</strong>);
+            content.push(` ${this.props.mouseText}`);
         }
         else {
-            content.push(`${this.state.mouseText}`);
+            content.push(`${this.props.mouseText}`);
         }
         return content;
     }
 
     selectItem() {
-        if(!this.state.disabled) {
+        if(!this.props.disabled) {
             if(this.state.selected) {
                 this.setState({selected: false})
             }
@@ -52,11 +43,11 @@ export class Catfood extends Component {
 
     setupEndPhrase() {
         let content = [];
-        if(this.state.disabled) {
-            content = `Печалька, ${this.state.addition} закончился.`;
+        if(this.props.disabled) {
+            content = `Печалька, ${this.props.addition} закончился.`;
         }
         else if(this.state.selected) {
-            content = this.state.phrase;
+            content = this.props.phrase;
         }
         else {
             content.push("Чего сидишь, порадуй котэ, ");
@@ -67,7 +58,7 @@ export class Catfood extends Component {
 
     render() {
         return (
-            <div  className={`catfood ${this.state.disabled ? 'disabled' : ""} ${this.state.selected ? 'selected' : ""}`}>
+            <div  className={`catfood ${this.props.disabled ? 'disabled' : ""} ${this.state.selected ? 'selected' : ""}`}>
                 <svg width="320px" onClick={() => this.selectItem()}
                     height="480px" 
                     viewBox="0 0 320 480" 
@@ -105,18 +96,18 @@ export class Catfood extends Component {
                     <div className="catfood__content">
                         <p className="catfood__descr">Сказочное заморское яство</p>
                         <h2 className="catfood__title">Нямушка</h2>
-                        <span className="catfood__addition">{this.state.addition}</span>
+                        <span className="catfood__addition">{this.props.addition}</span>
                         <p className="catfood__count">{this.portionString()}</p>
                         <p className="catfood__gift">{this.mouseString()}</p>
-                        <p className="catfood__additional-text">{this.state.additionalText}</p>
+                        <p className="catfood__additional-text">{this.props.additionalText}</p>
                         <div className="catfood__weight">
-                            <strong>{this.state.weight}</strong>
+                            <strong>{this.props.weight}</strong>
                             кг
                         </div>
                     </div>
                 </div>
                 <div className="catfood__footer">
-                    <span>{this.setupEndPhrase()}</span>
+                <span> {this.setupEndPhrase()}</span>
                 </div>
             </div>
         );
